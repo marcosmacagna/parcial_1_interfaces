@@ -1,0 +1,249 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,700;0,800;1,700&display=swap');
+
+
+
+body {
+	padding: 0;
+	margin: 0;
+	line-height: 1.6;
+	font-family: 'Barlow Condensed', sans-serif;
+	background: url('https://thumbs.dreamstime.com/b/abstract-vaporwave-landscape-sun-rising-over-pink-mountains-sea-calm-soft-blue-background-174786542.jpg') no-repeat center center fixed;
+	background-size: cover;
+	box-sizing: border-box;
+	scroll-behavior: smooth;
+}
+
+/* MENU */
+
+.logo {
+	width: 167px;
+	height: 57px;
+}
+
+nav {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	min-height: 8vh;
+	background-color: transparent;
+}
+
+.icono-menu {
+	display: none;
+	cursor: pointer;
+	border: none;
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+}
+
+.icono-menu span {
+	display: block;
+	background-color: floralwhite;
+	height: 3px;
+	width: 28px;
+	margin: 10px auto;
+	border-radius: 2px;
+}
+
+.enlaces-menu {
+	display: flex;
+	padding: 0;
+}
+
+.enlaces-menu li {
+	padding: 0 40px;
+	list-style-type: none;
+	transition: 0.3s;
+}
+
+.enlaces-menu li a {
+	text-decoration: none;
+	font-size: 1.8rem;
+	/*color: antiquewhite;*/
+	font-weight: 600;
+}
+
+/*
+.enlaces-menu li:hover {
+	background-color: skyblue;
+}
+*/
+
+/* RESPONSIVE */
+
+@media (max-width:768px){
+	body {
+		overflow: hidden;
+	}
+
+	.logo {
+		padding-left: 25px;
+	}
+
+	.icono-menu {
+		display: block;
+		position: absolute;
+		top: 15px;
+		right: 25px;
+	}
+
+	nav{
+		flex-direction: column;
+		align-items: flex-start;
+		padding: 25px 0;
+	}
+
+	.enlaces-menu{
+		flex-direction: row;
+		justify-content: space-around;
+		align-items: center;
+		height: 20vh;
+		margin: 0;
+		padding: 0;
+		width: 100%;
+		display: none;
+		opacity: 0;
+	}
+
+	.enlaces-menu li {
+		width: 100%;
+		text-align: center;
+		padding: 20px;
+	}
+}
+
+@keyframes muestraMenu {
+	from{opacity: 0;}
+	to{opacity: 1;}
+}
+
+.enlaces-menu.activado {
+	display: flex;
+	animation: muestraMenu 350ms ease-in-out both;
+}
+
+/* MAIN INDEX */
+
+section {
+	height: 70vh;
+	font-size: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color:black;
+	flex-wrap: wrap;
+	min-width: 250px;
+}
+
+section h1{
+	font-size: 70px;
+}
+
+section img{
+	width: 350px;
+	margin: 0 50px;
+}
+
+section .info{
+	width: 600px;
+	margin: 0 50px;
+	justify-content: center;
+	align-content: center;
+}
+
+.metaverso1 {
+	position: relative;
+	left: -50px;
+	opacity: 0;
+}
+
+.efecto-metaverso1 {
+	left: 0px;
+	opacity: 1;
+	transition: 1s linear;
+}
+
+.metaverso2 {
+	transform: scale(0.5);
+	opacity: 0;
+	height: 350px;
+	width: 350px;
+}
+
+.efecto-metaverso2 {
+	transform: scale(1);
+	opacity: 1;
+	transition: 1s linear;
+}
+
+.metaverso3 {
+	position: relative;
+	bottom: -80px;
+	opacity: 0;
+	height: 350px;
+	width: 350px;
+}
+
+.efecto-metaverso3 {
+	opacity: 1;
+	bottom: 0;
+	transition: 1s linear;
+}
+
+.metaverso4 {
+	transform: scale(.5);
+	opacity: 0;
+	height: 350px;
+	width: 350px;
+}
+
+.efecto-metaverso4 {
+	transform: scale(1);
+	opacity: 1;
+	transition: 1s linear;
+}
+
+/* FOOTER */
+
+.contacto-redes {
+	color: black;
+	margin-top: 10px;
+}
+
+/* MAIN FORMULARIO */
+
+.formulario {
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+  }
+  
+  .contenido {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: transparent;
+  }
+
+/* MODO OSCURO */
+
+.dark {
+	background-image: url(https://wallpaperaccess.com/full/3128426.jpg);
+}
+
+.dark h1, .dark h2, .dark p, .dark .contacto-redes{
+	color: white;
+	-webkit-text-stroke: 1px black;
+}
+
+.dark .contenido {
+	color: white;
+	background-color: black;
+}
+
+.dark .enlaces-menu li a {
+	color: white;
+}
